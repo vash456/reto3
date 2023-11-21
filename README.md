@@ -2,19 +2,23 @@
 Desarrollador:
     Darlin Estrada Patiño
 
-Aplicacion de gestion de tareas
+- Aplicacion de gestion de tareas
 
-    La aplicacion permite crear, listar, consultar y borrar tareas.
-    Los datos se almacenan en una base de datos en postgres que se puede montar con 
-    la imagen de docker que se adjunta en los archivos.
-    De las tareas se almacenas los datos del (task_name)nombre de la tarea, (detail)detalles de la tarea, (state) estado de la tarea (1: Activa, 2: Pendiente, 3: Terminada), (date) fecha de la tarea y (time) hora de la tarea. 
+La aplicacion permite crear, listar, consultar y borrar tareas.
+Los datos se almacenan en una base de datos en postgres que se puede montar con 
+la imagen de docker que se adjunta en los archivos.
+De las tareas se almacenas los datos del (task_name)nombre de la tarea, (detail) 
+detalles de la tarea, (state) estado de la tarea (1: Activa, 2: Pendiente, 3: Terminada), 
+(date) fecha de la tarea y (time) hora de la tarea. 
 
 Comandos para ejecutar la aplicacion:
+  
     npm install
     docker-compose up --build
     npm run dev / npm start
 
 Los datos de conexion a la base de datos de Postgres estan en el archivo.
+
     src\config\db_config.js
 
 Para probar la ejecucion se utiliza Postman. Se muestran algunos ejemplos:
@@ -51,7 +55,8 @@ Para probar la ejecucion se utiliza Postman. Se muestran algunos ejemplos:
         http://localhost:3000/tasks/7       -> elimina tarea id 7
 
 
-- comandos para la creacion del proyecto
+Comandos para la creacion del proyecto
+  
     git init
     npm init -y
     npm install express --save
@@ -59,6 +64,7 @@ Para probar la ejecucion se utiliza Postman. Se muestran algunos ejemplos:
     npm install pg //postgresql
     npm i -S sequelize dotenv pg pg-hstore
 
-- Docker
+Docker
+  
     docker-compose up --build
     docker-compose down
